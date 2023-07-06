@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.row{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+/*
+    -- LEFT CONTENT --
+*/
+h1{
+    padding-bottom: 8px;
+    font-family: 'Readex Pro';
+    font-size: 40px;
+    margin-bottom: 0px;
+    justify-content: flex-start;
+    line-height: 3.2rem;
+}
+.join-left{
+    color:#1D1E2C;
+    margin: 0;
+}
+p{
+    font-family: 'Inter';
+    color: #1D1E2C;
+    opacity: 75%;
+    font-size: 12px;
+    line-height: 1.2rem;
+}
+.col{
+    padding: 42px;
+    border-radius: 16px;
+}
+#left-content{
+    background-color: #B8E1FF;
+}
+.image-vector{
+    display: block;
+}
+img{
+    width: 300px;
+    height: 300px;
+    padding: 0px 32px 0px 32px;
+}
+
+/*
+    -- RIGHT CONTENT --
+*/
+
+#h1-right{
+    font-size: 24px;
+    color: #477998;
+    font-family: 'Readex Pro';
+    padding: 0;
+    text-align: center;
+    margin: 0;
+
+}
+#paragraph-right{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 8px;
+}
+#right-content{
+    margin: 86px 16px 88px 16px;
+    
+}
+#form-content{
+    margin: 8px;
+    align-items: self-start;
+   
+}
+.form-position{
+    margin: 48px;
+    margin-top: 16px;
+}
+
+input{
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 8px;
+    border-width: 0.8px;
+    border-color: #477998;
+    height: 32px;
+}
+
+input::placeholder{
+    text-align: left;
+}
+
+label{
+    font-size: 12px;
+}
+#btn-position{
+    margin-top: 16px;
+    text-align: center;
+}
+button{
+    padding: 8px 32px;
+    border-radius: 8px;
+    color: white;
+    background-color: #477998;
+    border: none;
+    
+}
