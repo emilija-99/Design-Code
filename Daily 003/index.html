@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Create your account</h1>
+                <form action="index.html" method="post" id ='signup'>
+                    <div class="mb-3" id = "field">
+                        <label for="name">Name<span>&ast;</span></label>
+                        <input required aria-describedby="Enter your name" pattern="[A-Z]+[a-z]{2,16}" type="text" id = "name" name = "name">
+                        <small></small>
+                    </div>
+                    <div class="mb-3" id = "field">
+                        <label for="email">Email<span>&ast;</span></label>
+                        <input required type="text" id = "email" name = "email">
+                        <small></small>
+                    </div>
+
+                    <div class="mb-3" id = "field">
+                        <label for="password">Password<span>&ast;</span></label>
+                        <input required type="password" id = "password" name = "password"  minlength="6">
+                        <small></small>
+                    </div>
+                    <button type="submit" name="Submit" class="btn-submit">Submit</button>
+                 </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="welcome"></div>
+    <script src="func.js"></script>
+</body>
+</html>
