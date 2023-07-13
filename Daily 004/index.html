@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <article class="flow">
+                <h1>Extrinsic sizing vs intrinsic sizing</h1>
+                <figure class="callout">
+                    <p>
+                        When box is using <strong>extrinsic sizing</strong>, there's a limit of how much content you can add before
+                        it overflow out of the box's bounds. This makes the word, "awesome", overflow.
+                    </p>
+                </figure>
+                <label for="intrinsic-switch" class="toggle">
+                    <span class="toggle__label">
+                        Turn on intrinsic sizing
+                    </span>
+                    <input type="checkbox" role="switch" class="toggle__element" id = "intrinsic-switch"/>
+                    <div class="toggle__decor" aria-hidden = "true">
+                        <div class="toggle__thumb">
+
+                        </div>
+                    </div>
+                </label>
+                <p class="awesome" data-element="awesome">CSS is awesome</p>
+            </article>
+        </div>
+    </main>
+
+
+    <article>
+        <p>I want to be normal sized and the default color.</p>
+        <p>I want to be red and larger then the other text.</p>
+    </article>
+    <script src="func.js"></script>
+</body>
+</html>
