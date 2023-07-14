@@ -1,0 +1,36 @@
+#my-element{
+    color: blue;
+}
+
+.my-element-class{
+    color: purple;
+}
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flow{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    transform: translateX(-100%);
+    animation-name: run;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes run {
+    0%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(50vh);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+img{
+    width: 100px;
+    height: 100px;
+}
