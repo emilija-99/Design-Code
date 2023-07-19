@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="helper.css">
+    <title>Fly me to thee moon</title>
+</head>
+<body onload = "myFunction()">
+    <div class="navigation">
+        <button disabled><a href="helper.html" aria-disabled="true">Back to Home</a></button>
+    </div>
+
+    <div class="image-container">
+        <img src="Images/3600_2_10-removebg-preview.png" >
+    </div>
+</body>
+<script>
+    function myFunction(){
+        setTimeout(()=>{
+           window.location.href = './home.html'
+        },3000)
+    }
+    myFunction();
+</script>
+</html>

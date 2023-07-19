@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Jua;
+    src: url(./Fonts/Jua-Regular.ttf);
+}
+:root{
+    --background-color:#CDEEFF;
+    --shadow-color:#9C8DA2;
+    --white-color:#FFFFFF;
+    --text-color:#371A46;
+}
+*{
+    background-color: var(--background-color);
+    margin: 0;
+    overflow: hidden;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 240px;
+}
+button{
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--text-color);
+    background-color: var(--white-color);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+a{
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+img{
+    width: 30%;
+    background-color: transparent;
+}
+.image-container{
+    margin-top: 50px;
+    background-color: transparent;
+    animation: diagonal-move-anim 3s cubic-bezier(0.175, 0.885, 0.32, 1.275)  ;
+}
+@keyframes diagonal-move-anim {
+
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(1200px, -180px);
+	}
+
+}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Jua;
+    src: url(./Fonts/Jua-Regular.ttf);
+}
+:root{
+    --background-color:#CDEEFF;
+    --shadow-color:#9C8DA2;
+    --white-color:#FFFFFF;
+    --text-color:#371A46;
+}
+*{
+    background-color: var(--background-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 700px;
+    margin-left: 48px;
+    margin-top: 36px;
+}
+h1{
+    font-family: Jua;
+    color: var(--text-color);
+    font-size: 42px;
+    text-align: center;
+}
+.navigation{
+    margin-left: 284px;
+    margin-top: 24px;
+}
+.quest-container{
+    margin-top: 30px;
+}
+button{
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--text-color);
+    background-color: var(--white-color);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.image-container{
+    width: 35%;
+    position: absolute;
+    background-color: transparent;
+    left: 500px;
+}
+img{
+    width: 100%;
+    background-color: transparent;
+}
+a{
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: transparent;
+}
