@@ -1,0 +1,28 @@
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+accounts = [[1,5],[7,3],[3,5]]
+let maximumWealth = function(accounts) {
+    // var m = accounts.length;
+    // var n = accounts[0].length;
+    let temp = [];
+    for(let i = 0; i < accounts.length; i++){
+        temp[i] = 0;
+        for(let j = 0; j < accounts[0].length; j++){
+            temp[i] += accounts[i][j];
+        }
+    }
+
+    let maxtemp = 0;
+    maxtemp = Math.max(...temp);
+    // for(let i = 0; i < temp.length; i++){
+    //     if(temp[i] > maxtemp)
+    //         maxtemp = temp[i];
+    // }
+
+    console.log(maxtemp);
+    return maxtemp;
+
+};
+maximumWealth(accounts)
