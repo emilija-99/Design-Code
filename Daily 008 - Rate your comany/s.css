@@ -1,0 +1,113 @@
+@font-face first{
+    font-family: 'sub';
+    src: url("./fonts/Inconsolata-Medium.ttf");
+}
+@font-face {
+     font-family: 'fot';
+     src: url("./fonts/Inconsolata-Light.ttf");
+}
+@font-face {
+    font-family: header;
+    src: url("./fonts/Ruda-Bold.ttf");
+}
+*{
+    width: 254px;
+    margin: auto;
+}
+.container{
+    border-radius: 16px;
+    background-color: #EDF2EF;
+    width: 100%;
+    height: 60vh;
+    margin-top: 40px;
+    padding: 24px;
+}
+.main-header{
+    margin:10px 0px 20px 0px;
+    font-family: header;
+}
+.main-header .sub{
+    margin:20px 0px 20px 0px;
+
+}
+.sub{
+    margin-top: 10px;
+    align-items: center;
+    font-size: 14px;
+    font-family:fot;
+
+}
+
+.circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 41px;
+    background-color: #CD2335;
+    color: #EDF2EF;
+    border: none;
+    cursor: pointer;
+}
+button#circle1.circle:active, button#circle2.circle:active,
+    button#circle3.circle:active, button#circle4.circle:active,button#circle5.circle:active{
+    border-radius: 50%;
+    width: 40px;
+    height: 41px;
+    background-color: #EDF2EF;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #373F47;
+}
+.btn{
+    border-radius: 8px;
+    border: 2px solid #373F47;
+    backface-visibility: hidden;
+    color: #373F47;
+    padding: 4px 8px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.btn:active{
+    border-radius: 8px;
+    border: 2px solid #373F47;
+    background-color: #373F47;
+    color: #EDF2EF;
+    padding: 4px 8px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition-duration: 0.1s;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+}
+#circle1{
+    background-color:#CD2335 ;
+    color: #EDF2EF;
+}
+#circle2{
+    background-color:#F04B3F ;
+    color: #EDF2EF;
+}
+#circle3{
+    background-color:#F08036 ;
+    color: #EDF2EF;
+}
+#circle4{
+    background-color:#EDAE26 ;
+    color: #EDF2EF;
+}
+#circle5{
+    background-color:#6FBF44 ;
+    color: #EDF2EF;
+}
+.fotter{
+    font-size: 12px;
+    font-family: fot;
+    align-items: center;
+
+
+}
