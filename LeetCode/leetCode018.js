@@ -9,7 +9,10 @@ var checkIfInstanceOf = function(obj, classFunction) {
     }
 
     const classPrototype = classFunction.prototype;
-    return Object.getOwnPropertyNames(classPrototype).some(prop => typeof classPrototype[prop] === 'function' && obj[prop]);
+    const propNames = Object.getOwnPropertyNames(classPrototype);
+    const result = propNames.some(prop => typeof classPrototype[prop] === 'function' && obj[prop]);
+    return result;
+
 
 };
 func = () => checkIfInstanceOf(5, Number)
