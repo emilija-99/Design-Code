@@ -114,10 +114,25 @@
 //
 // var result = sum(10,20,30,40);
 
-const employee1 = {firstName:'Sahima', lastName:'Mutti'}
-const employee2 = {firstName:'Sahima', lastName:'Mutti'}
-function say(greeting){
-    console.log(greeting + " "+this.firstName + " "+ this.lastName);
+// const employee1 = {firstName:'Sahima', lastName:'Mutti'}
+// const employee2 = {firstName:'Sahima', lastName:'Mutti'}
+// function say(greeting){
+//     console.log(greeting + " "+this.firstName + " "+ this.lastName);
+// }
+// say.call(employee1, "HI")
+// say.apply(employee1, ["Hiiii"]);
+
+const person = {
+    firstName: "Jacob",
+    lastName : "Lee",
+    fullName: function (){
+        return this.firstName+" "+this.lastName;
+    }
 }
-say.call(employee1, "HI")
-say.apply(employee1, ["Hiiii"]);
+const member = {
+    firstName: "Lie",
+    lastName: "Socrat"
+}
+
+let full = person.fullName.bind(member)
+console.log(full())
