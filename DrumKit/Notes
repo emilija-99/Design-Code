@@ -1,0 +1,15 @@
+Notes:
+<kbd> -- represent a span or inline text denoting textual user input from a keyboard, voice input or any other text entry device. 
+By converting the user agent defaults to rendering the contest of a kbd elemnt using its default monospace font,
+althrough this is not mandated by the HTML standard.
+keyCode : https://www.toptal.com/developers/keycode
+
+window - a window containing a DOM decument is only avaialble in the browser.
+if(typeof window !== "undefined"){} --> solving ReferenceError: window is not defined
+
+querySelectorAll() -- returns a NodeList with all elements that matches a CSS selector(s).
+Method will throws SYNTAX ERR exception if the selector is invalid.
+
+NodeList - array-like collection of nodes extracted from a document. The node can be only accessed by index.
+NodeList contains element nodes, attribute nodes and text nodes. It is a static collection.
+
