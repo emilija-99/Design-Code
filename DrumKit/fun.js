@@ -7,9 +7,7 @@ if(typeof window !== "undefined"){
         audio.play();
 
         key.classList.add('playing');
-        setTimeout(function (){
-
-        },0.07)
+        
 
     });
 }
