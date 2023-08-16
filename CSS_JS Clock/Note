@@ -1,0 +1,28 @@
+setInterval() -> function to be executed every delay miliseconds. First execution after delay.
+Difference between setTimeout and setInterval is that setTimeout is executed only once after interval of time.
+
+"inset" box shadow - is a type of box shadow that creates the illusio of a shadow inside the element, rather then outside.
+
+translate - repositions an element in the horizontal and/or vertical direction.
+
+Transformation is characterized by a two-dimensional vector. It's coordinates how much the element moves
+in each direction. 
+Translate - this value represent horisontal (x coord) translation vector. The vertical (y coord) will be set to 0 is we 
+set translate: 100% => translate: 100% 0;
+
+transform-origin - is the point around which a transformation is applied. The initial value is (0,0) for all svg,
+expect for root <svg> and <svg> that is direct child of a forgein object -> svg element includes elements from a different XML namespace.
+
+transition - is shorthand property for:
+  transition-property, 
+  transition-duration, 
+  transition-timing-function and 
+  transition-delay.
+
+transition-property - property to which a transition effect should be applied.
+
+transition-duration - sets a length of time a transition animation should take to complete.
+
+transition-timing-function - how intermedia values are calculated for css properties beign affected by a transition effect.
+
+transition-delay - specific duration wo wait before starting proeperty's transition effect when it's value changes.
