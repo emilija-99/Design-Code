@@ -1,0 +1,27 @@
+fetch - global method that provides an easy, logical way to fetch resources asynchroniously across the network.
+Unlike XMLHTTPRequest taht is callback - based API, Fethc is promise-based and provides a better alternative that can be aesily used in service workers.
+Fetch also integrates advanced HTTP concepts such as CORS and other exceptions to HTTP.
+Fetch takes one argument the path to the resources you want to fecth and does not directly return the JSON response body but instead
+returns a promise that resolves with a Response object.
+Response Object in turn, does not directly contain the actual JSON response body but instead a representation of the entaire http repsonse.
+So to extract the JSON body content from the Response object, we use json() method which returns a second promise that resolves with the result of parsing the reposnse body text as JSON.
+
+const prom = fethc(url)
+console.log(prom) -> Promise{<pending>}
+
+After the fetch(), include the promise method .then()
+If the promise returned is resolved, the function within the .then() method is executed. That function contains the code for handling
+the data recived from the API. The API you call using fetch may be down or other error occur. If this happends the reject promise will be reutned.
+The catch method ise used to handle reject. The code with the catch will be executed if an error occures when calling the API of your choise.
+
+data =>cities.push(...data)
+this array is now separed into individual arguments (try cities.push(data) and than this and you will understand difference)
+
+RexExp is a standard built-in object. We can create RexExp object in few ways:
+- the listeral way -> /expression/.match('string to test against')
+- the new keyword with a string argumnet -> new RegExp('expression')
+- the new keyword with literal -> new RexExp(/expression/)
+
+To match a string with a regular expression, all you have to do is pass the litteral string. 
+The i flag is standard for case-insensitive. That means that our expression with ignore casting on the string.
+The g flas is standard for a global. It tells the expression that we want to repeat our search as many times as possible.
