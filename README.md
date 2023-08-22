@@ -1,6 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hi+,+my+name+is+Emilija+.;I'm+here+to+pursue+my+dreams+come+true.)](https://git.io/typing-svg)
 
-https://ko-fi.com/nobody99
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#ab3281', 'W7W8OHBQX');kofiwidget2.draw();</script> 
 
 # Design-Code
 Welcome to my Code and Design Showcase repository!
