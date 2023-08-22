@@ -1,0 +1,23 @@
+<canvas> - elemnt to draw 2D graphic. Is a HTML elment which can be used to draw graphic which can be use to draw graphics via scripting.
+The default size of the convas is 300px width and 150px height.
+To display something, a script first need to access the rendering content and draw on it. The <canvas> has a method
+getContent() used to obrain the rendering context and it drawing function - CanvasRenderingContext2D.
+
+Normally 1 unit in the grid correspond to 1px on the canvas. The origin of this grid is positioned in top left corner at coordinate (0,0)
+
+ctx.strokeStyle - specific the color, gradient or pattern to use for the stokes (outlines) around shapes. The default is #000.
+
+ctx.lineJoin - determines the shape used to join two line segments where they meet.
+This property has no effect wherever two connected segments have the same direction, because no joining areas will be added in this case. 
+Degenerate segments with length of zero are also ignored. "round", "mitter" adn "bevel", where the "mitter" is default value.
+
+ctx.lineCap - determines the shape used to draw end points of the line. "butt", "round", "square", where the "butt" is default value.
+
+ctx.globalCompositionOperation - sets the type of compositing operation to apply when drawing new shapes. A value/string indentifying which of
+the compositing or blending mode operation to use.
+
+ctx.beginPath() - starts a new path by emptying the list of sub-parts.
+
+ctx.moveTo() - begins a new sub-path at the point specified by the given (x,y) coordinates.
+
+ctx.lineTo() - adds a straight line to current sub-path by connecting sub-path's last point the specific (x,y) coordinates.
