@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.search{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 64px;
+
+}
+.search_bar{
+    width: 480px;
+    height: 25px;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #1D1E2C;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-top: 36px;
+    text-align: center;
+}
+button{
+    border: none;
+    background-color: white;
+}
+button img{
+    width: 26px;
+    height: 26px;
+}
+.search_bar:focus{
+    color: black;
+    font-style: italic;
+    font-size: 16px;
+    border: none;
+}
+.search_bar:active{
+    border: none;
+}
+img{
+    width: 724px;
+    height: 561px;
+    cursor: pointer;
+}
+.place_to_type{
+    font-size: 12px;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:300px;
+    animation: typewriter 2s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 21em;}
+    to{width: 20em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
