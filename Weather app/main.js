@@ -33,6 +33,7 @@ var uniqueForestForEachDay = [];
 var dayOfWeek = ['Monday ', 'Tuesday ', 'Wednesday ', 'Thursday ', 'Friday ','Saturday ','Sunday '];
 var forestData = [];
 let currentTime = new Date().getHours();
+const err = document.querySelector('.error_display');
 function displayOptions(){
     locationList.forEach(obj => {
         locations.innerHTML+=`<option value=${obj.selectOption} data-timezone = ${obj.time} data-latlog = ${obj.latLog}>${obj.name}</option>`;
@@ -68,9 +69,11 @@ locationSelect.addEventListener('change', function (){
     optionSelected.innerHTML = `<h2 class = text>Your choosen county: ${selectedLocation}, Timezone: ${time}, Latlog: ${latlng[0]} ${latlng[1]}</h2>`;
     showPosition(latlogList[0],latlogList[1]);
     clearForest(displayForestObj);
+    clearForest(err);
     uniqueForestForEachDay = [];
     locationList = [];
     forestData = [];
+
 })
 
 function showPosition(longitude,latitude){
@@ -91,7 +94,7 @@ function showPosition(longitude,latitude){
             showForecast();
         })
         .catch(err=>{
-            document.querySelector('.error_display').innerHTML = `
+            err.innerHTML = `
         
     <h2 style="color: #3D405B; > <span class="error" style="color: #CD2335">ERROR OCCUR!</span>Currently we can not serve you with wheather informations!</h2>
     <img src="cloud-connection.png" width="200" height="200"/>`
