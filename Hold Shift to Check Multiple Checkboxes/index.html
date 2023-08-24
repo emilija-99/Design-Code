@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold Shift to Check Multiple Checkboxes</title>
+</head>
+<style>
+    html{
+        margin: 0;
+    }
+    *{
+        background-color: cornflowerblue;
+        color: white;
+        font-size: 20px;
+    }
+    .container{
+        float: left;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .done{
+        width: 40%;
+        display: flex;
+        align-items: center;
+    }
+    li{
+        list-style: none;
+        text-align: justify;
+        box-shadow: 0 0 1px 1px ;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 12px;
+        padding-left: 12px;
+    }
+    li input{
+        margin-right: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <ul class="list">
+            <li value="1" id="1"><input type = "checkbox" value="1" id="1">This is an inbox layout</li>
+            <li value="2" id="2"><input type = "checkbox" value="2" id="2">Check one itme</li>
+            <li value="3" id="3"><input type = "checkbox" value="3" id="3">Hold down your Shit key</li>
+            <li value="4" id="4"><input type = "checkbox" value="4" id="4">Check a lower item</li>
+            <li value="5" id="5"><input type = "checkbox" value="5" id="5">Everthing inbetween should also be set to checked</li>
+            <li value="6" id="6"><input type = "checkbox" value="6" id="6">Try do it with out any libraries</li>
+            <li value="7" id="7"><input type = "checkbox" value="7" id="7">Just regular JavaScript</li>
+            <li value="8" id="8"><input type = "checkbox" value="8" id="8">Good luck</li>
+            <li value="9" id="9"><input type = "checkbox" value="9" id="9">Don't foget to tweet your result!</li>
+        </ul>
+    </div>
+    <div class="done">
+        <ul class="done-list">
+            
+        </ul>
+    </div>
+
+    <script>
+        
+        const listItems = document.querySelectorAll('.list li');
+        const doneList = document.querySelector('.done-list');
+        const listDone = '';
+        var items = listItems.forEach(elem => {
+            const checkedElements = elem.querySelector('input[type="checkbox"]');
+            checkedElements.addEventListener('change', function(){
+                if(this.checked){
+                    const checkedElement = this.parentElement;
+                    doneList.innerHTML+=`<li>
+                        ${checkedElement.textContent}
+                    </li>`
+                    checkedElement.style.textDecoration = "line-through";
+                    
+                }
+                if(!this.checked){
+                    this.removeAttribute('checked');
+                    this.parentElement.style.textDecoration = "none";
+                }
+            });
+            
+        })
+    </script>
+</body>
+</html>
