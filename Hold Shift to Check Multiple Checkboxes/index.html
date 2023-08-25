@@ -38,51 +38,152 @@
     li input{
         margin-right: 20px;
     }
+
+    .inbox{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 450px;
+    }
+    .item{
+        position: relative;
+        display: flex;
+        padding: 8px;
+        margin-left: 20px;
+        border: 1px solid white;
+        margin-bottom: 5px;
+        border-radius: 8px;
+    }
+    .item > input{
+        margin-right: 10px;
+    }
+    .item > input:checked {
+        accent-color:  #F45D01; 
+        
+    }
+    
 </style>
 <body>
     <div class="container">
         <ul class="list">
-            <li value="1" id="1"><input type = "checkbox" value="1" id="1">This is an inbox layout</li>
-            <li value="2" id="2"><input type = "checkbox" value="2" id="2">Check one itme</li>
-            <li value="3" id="3"><input type = "checkbox" value="3" id="3">Hold down your Shit key</li>
-            <li value="4" id="4"><input type = "checkbox" value="4" id="4">Check a lower item</li>
-            <li value="5" id="5"><input type = "checkbox" value="5" id="5">Everthing inbetween should also be set to checked</li>
-            <li value="6" id="6"><input type = "checkbox" value="6" id="6">Try do it with out any libraries</li>
-            <li value="7" id="7"><input type = "checkbox" value="7" id="7">Just regular JavaScript</li>
-            <li value="8" id="8"><input type = "checkbox" value="8" id="8">Good luck</li>
-            <li value="9" id="9"><input type = "checkbox" value="9" id="9">Don't foget to tweet your result!</li>
-        </ul>
-    </div>
-    <div class="done">
-        <ul class="done-list">
-            
+            <li><input type = "checkbox" >This is an inbox layout</li>
+            <li ><input type = "checkbox">Check one item</li>
+            <li ><input type = "checkbox">Hold down your Shit key</li>
+            <li ><input type = "checkbox">Check a lower item</li>
+            <li ><input type = "checkbox">Everthing inbetween should also be set to checked</li>
+            <li ><input type = "checkbox">Try do it with out any libraries</li>
+            <li ><input type = "checkbox">Just regular JavaScript</li>
+            <li ><input type = "checkbox">Good luck</li>
+            <li ><input type = "checkbox">Don't foget to tweet your result!</li>
         </ul>
     </div>
 
+
+    <div class="inbox">
+        <div class="item">
+            <input type="checkbox">
+            <p>This is an inbox layout</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Check one item</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Hold down your Shit key</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Check a lower item</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Everthing inbetween should also be set to checked</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Try do it with out any libraries</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Just regular JavaScript</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Good luck</p>
+        </div>
+
+        <div class="item">
+            <input type="checkbox">
+            <p>Don't foget to tweet your result!</p>
+        </div>
+    </div>
+
     <script>
-        
-        const listItems = document.querySelectorAll('.list li');
+/*
+        -- MY CODE --
+*/
+        const listItems = document.querySelectorAll('.list li'); // get all children elemnets
         const doneList = document.querySelector('.done-list');
         const listDone = '';
         var items = listItems.forEach(elem => {
             const checkedElements = elem.querySelector('input[type="checkbox"]');
             checkedElements.addEventListener('change', function(){
                 if(this.checked){
-                    const checkedElement = this.parentElement;
-                    doneList.innerHTML+=`<li>
-                        ${checkedElement.textContent}
-                    </li>`
+                    const checkedElement = this.parentElement; // parent element which is input what we need
+                    // doneList.innerHTML+=`<li>
+                    //     ${checkedElement.textContent} 
+                    // </li>`;  content wht is in out input element (text between)
                     checkedElement.style.textDecoration = "line-through";
-                    
                 }
                 if(!this.checked){
-                    this.removeAttribute('checked');
+                    this.removeAttribute('checked'); // if checked and changed it must to be unchecked
                     this.parentElement.style.textDecoration = "none";
-                    
                 }
             });
-            
         })
+        
+/*
+        -- Project 10 --
+*/  
+        const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+        checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+        
+        let lastChecked;
+        
+        function handleCheck(e){
+            let inBetween = false;
+          
+            if(e.shiftKey && this.checked){
+                checkboxes.forEach(checkbox =>{
+                    console.log(checkbox);
+                    if(checkbox === this || checkbox === lastChecked){
+                        inBetween = !inBetween;
+                    }
+
+                    if(inBetween){
+                        checkbox.checked = true;
+                        const elm = checkbox.parentElement;
+                        elm.style.textDecoration = "line-through"
+                    }
+                    
+                    
+                })    
+            }
+            lastChecked = this;
+        }
+
+        
+
+        
+        
+
     </script>
 </body>
 </html>
