@@ -1,0 +1,32 @@
+debounce - utility function used to control the frequency of function execution 
+(dealing with events like scrolling, resizing, or input..)
+
+window.scrollY - property returns the number of pixels the document has been scrolled vertically. 
+It represents how far the user has scrolled down the page from the top. 
+window.innerHeight - returns the height of the viewport in pixels
+
+window.scrollY + window.innerHeight - expression callculates the current vertical position of the viewpoet's scroll 
+plus height of the viewport itself. - determine the position of the bottom edge of the viewport relative to the 
+entire documnet.
+
+sliderImages - calculate the vertical position of the bottom edge of an element.
+
+const slideInAt = (window.scrollY + window.innerHeight) - sliderImages.height / 2; - 
+calculate a position that's roughly halfway up the sliderImages element's height from the bottom of the viewport.
+
+.offsetTop - return the distance in pixels from the top of the closest relatively positioned ancestor element.
+gives you a vertical distance from the top of sliderImages to the top of its containing element.
+
+.height - it returns the height of the element in pixels.
+
+const imageBottom = sliderImages.offsetTop + sliderImages.height;
+.offTop get the vertical distance from the top to .height of the element - you get the vertical position of
+the bottom egde of the sliderImages element relative to the top of its containing element.
+Calculates the vertical position of the bottom egde of the sliderImages element within its conaining element
+
+isHalfShown - condition will be true if the sliderImage is at least partially visiable in the viewport - halfway up
+
+isNotScrolledPast - if the current vertical scroll position is lees then the vertical position of the bottom egde
+of the element.
+Condition will be true if the user has not scrolled past element.
+
