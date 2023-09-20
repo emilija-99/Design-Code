@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHAT THE FLEXBOX!?</title>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>
+            WHAT THE FLEXBOX!?
+        </h1>
+    </div>
+    <style>
+        h1{
+            text-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+            font-size: 100px;
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+    
+
+    <script>
+        const hero = document.querySelector('.hero');
+        const text = hero.querySelector('h1');
+
+        function shadow(e){
+           
+            // var width = hero.offsetWidth;
+            // var height = hero.offsetHeight;
+
+            const {offsetWidth: width, offsetHeight: height} = hero;
+           // console.log("Width" + width+" height: "+height);
+            let {offsetX :x, offsetY:y} = e;
+           // console.log("offsetX : "+x+" offsetY :"+y);
+            const walk = 250;
+
+            if(this !== e.target){
+                x = x + e.target.offsetLeft;
+                y = y + e.target.offsetTop;
+            }
+
+            const xWalk = Math.round((x / width * walk) - (walk / 2));
+            const yWalk = Math.round((y / width * walk) - (walk / 2));
+
+            text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(148, 206, 219, 0.3),
+            ${xWalk * -1}px ${yWalk}px  0 rgba(148, 206, 219, 0.3),
+            ${xWalk}px ${yWalk * -1}px  0 rgba(148, 206, 219, 0.3),
+            ${xWalk}px ${yWalk}px 0 rgba(148, 206, 219, 0.3)
+            `;
+           // console.log(xWalk, yWalk);
+        }
+/*
+        - we need to get width and height of the things that we 
+        have govered over, which is the hero.
+
+        xWalk and yWalk [-50, 50];
+
+
+*/
+        hero.addEventListener('mousemove', shadow);
+    </script>
+</body>
+</html>
